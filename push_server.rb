@@ -134,5 +134,5 @@ class PushServer < EM::Connection
 end
 
 EM.run do
-  EM.start_server "0.0.0.0", 10000, SimpleServer
+  EM.start_server "0.0.0.0", 10000, PushServer
 end
