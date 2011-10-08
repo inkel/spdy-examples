@@ -4,6 +4,40 @@ Collection of simple Ruby SPDY servers, based on the [`spdy` gem from
 Ilyia Grigorik](https://github.com/igrigorik/spdy) and the wonderful
 [SPDY Book](http://spdybook.com/) as a reference.
 
+## Why use SPDY?
+
+There are two main reasons to use SPDY
+
+### Security
+
+Since the raising of browser extensions that eases hijacking of HTTP
+sessions two things became clear: HTTP session was far from perfect
+and everybody should be using secure connections. Some major sites
+like Google and GitHub began to serve all their pages, at least for
+authenticated users, in HTTPS. SPDY **always** runs over SSL, which
+makes it secure by default.
+
+**Use HTTPS, or better yet, use SPDY with HTTPS fallback.**
+
+### Speed
+
+Quoting SPDY Book:
+
+> SPDY is not optimized for very small applications.
+
+This doesn't mean that you shouldn't be using SPDY, but just to have
+in mind that SPDY will probably not perform faster for very small
+applications. But if your application deals with lots of resources
+then SPDY might outperform your web application. And using SPDY
+features like Server Push might greatly outperform your previous
+application.
+
+Google already had SPDY enabled for their sites if you use
+Chrome. Firefox is going to implement SPDY in their next release, and
+Amazon began delivering content through SPDY to their new Kindle. The
+future needs faster and secure web access, and SPDY provides all that
+out of the box.
+
 ## Requirements
 
 I've tested this on Ruby 1.9.2 and 1.9.3.
