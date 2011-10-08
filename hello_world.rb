@@ -6,7 +6,7 @@ $: << "lib" << "../lib"
 # regular HTTP server.
 #
 # (1) start the SPDY eventmachine server
-# > ruby spdy_server.rb
+# > ruby hello_world.rb
 #
 # (2) start Chrome and force it to use SPDY over SSL.
 #
