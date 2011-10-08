@@ -67,3 +67,20 @@ session.
 
 Simple server that kind of mimics a regular HTTP server, sending the
 requested file, one per connection.
+
+### `push_server.rb`
+
+Now we're talking. This server implements one of the most interesting
+features of SPDY: [Server
+Push](http://www.chromium.org/spdy/link-headers-and-server-hint). As
+the official documentation says:
+
+> Server Push is where the server pushes a resource directly to the
+> client without the client asking for the resource.  The server is
+> making an assumption here that pushing the resource is desirable.
+> Pushing a cacheable resource can be risky, as the browser might
+> already have the resource and the push can be redundant.
+
+This simple server always pushes resources, even though they might
+already be on the browser's cache. It is only for demonstrational
+purposes.
