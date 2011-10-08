@@ -84,3 +84,15 @@ the official documentation says:
 This simple server always pushes resources, even though they might
 already be on the browser's cache. It is only for demonstrational
 purposes.
+
+# TODO
+
+* Add POST examples.
+* Implement a server that negotiates SPDY & HTTP/1.1 in order to offer
+  fallback for browsers that do not implement SPDY.  I'm guessing the
+  best options is switching to
+  [Carson McDonald's EventMachine fork](https://github.com/carsonmcdonald/eventmachine)
+  until the mantainers of EventMachine merge his
+  [pull request](https://github.com/eventmachine/eventmachine/pull/196)
+  for NPN negotiation.
+* Create framework for easier for stream creation.
