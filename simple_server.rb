@@ -96,11 +96,3 @@ end
 EM.run do
   EM.start_server "0.0.0.0", 10000, SimpleServer
 end
-
-# (1) start the SPDY eventmachine server
-# > ruby spdy_server.rb
-#
-# (2) start Chrome and force it to use SPDY over SSL
-# > google-chrome --use-spdy=ssl
-#
-# (3) visit https://localhost:10000/
