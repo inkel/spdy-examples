@@ -62,3 +62,8 @@ command line flag to enable the Timeline API:
 
 Obligatory Hello, World! server to demonstrate a super simple SPDY
 session.
+
+### `simple_server.rb`
+
+Simple server that kind of mimics a regular HTTP server, sending the
+requested file, one per connection.
