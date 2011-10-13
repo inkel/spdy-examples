@@ -1,3 +1,10 @@
+# READ THIS FIRST!
+
+This examples we're made doing some low-level usage of the
+[`spdy`](https://github.com/igrigorik/spdy) gem. For a simple
+framework to use SPDY I'd recommend you to take a look at [Andale SPDY
+framework](https://github.com/inkel/andale).
+
 # Ruby SPDY examples
 
 Collection of simple Ruby SPDY servers, based on the [`spdy` gem from
